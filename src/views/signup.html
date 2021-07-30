@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <form class="login-box" action="/signup" method="POST">
+        <h1>Bienvenido a Nica Lancing</h1>
+        <br>
+        <input type="text" name="username" placeholder="Nombre de usuario">
+        <input type="text" name="email" placeholder="Correo electrónico">
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <!--<input type="password" name="password" placeholder="Confirme su contraseña"required >-->
+        <button type="submit">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="/login">Inicia Sesión</a></p>
+    </form>
+</body>
+<style>
+  .login-box {
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #161730;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login-box h1 {
+  color: whitesmoke;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  outline: 0;
+  background: f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.login-box button 
+{
+  border: 0;
+  display: block;
+  background-color: #44c767;
+  margin: 15px auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.login-box button:hover 
+{
+    border-color: #ffffff;
+}
+
+.login-box button:active
+{
+    background-color: #ffffff;
+    color: #000;
+}
+
+.login-box p
+{
+    font-size: 13.5px;
+    color: white;
+}
+
+.login-box a
+{
+    color: crimson;
+}
+</style>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+</head>
+<body>
+  <form action="/signup" method="POST">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">
+      SignUp
+    </button>
+  </form>
+</body>
+</html>-->
+<!-- Tampoco es el register de oscar, es solo de prueba-->

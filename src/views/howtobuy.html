@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title><%= title%></title>
+    <%- include('partials/header.html') %>
+</head>
+<body>
+    <% if (user) {%>
+        <%- include('partials/navigationUserLog.html') %>
+        <%} else {%>
+            <%- include('partials/navigation.html') %>
+        <%}%>
+        <div class="container">
+            <div class="container-fluid">
+                <h1>¿Como Comprar un emprendimieto o proyecto?</h1>
+    
+                <p>
+                    vaya! pareces que estas interesado en comprar un proyecto uwu
+    
+                    <p>
+                        Para realizar esta accion mueve el raton en la etiqueta del proyecto que deseas comprar selecciona el boton comprar y listo rellena el fomulario y espera tu respuesta!
+                    </p>
+                </p>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <%- include('partials/header.html') %>
+    <!--<script src="./js/index.js" ></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <% if (user) {%>
+    <%- include('partials/navigationUserLog.html') %>
+      <%} else {%>
+        <%- include('partials/navigation.html') %>
+          <%}%>
+            <!--NAVIGATION BUSINESS-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll category_list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="asistente_virtual">
+                        <%=categories[3].business1%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="planes_negocios">
+                        <%=categories[3].business2%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="rrhh">
+                        <%=categories[3].business3%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="estudio_mercado">
+                        <%=categories[3].business4%>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="ms-auto">
+                    <form class="d-flex ">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </nav>
+
+            <!--PUBLICACIONES-->
+
+            <div class="container mt-4 mb-4">
+              <h3>Negocios</h3>
+              <br>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.restaurantelacupula.com/wp-content/blogs.dir/1417/files/home/restaurante-la-cupula.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Plan de negocios para restaurantes</h5>
+                      <p class="card-text">Haré un plan de negocios para que puedas empezar tu propio restaurante.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 38
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="asistente_virtual">
+                  <div class="card h-100">
+                    <img
+                      src="https://trabajarporelmundo.org/wp-content/uploads/2015/08/trabajar-como-asistente-virtual-desde-casa.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Asistente virtual para tu empresa.</h5>
+                      <p class="card-text">Le hacemos un asistente virtual para su empresa.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 25
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="estudio_mercado">
+                  <div class="card h-100">
+                    <img src="https://webescuela.com/wp-content/uploads/2021/03/que-es-un-estudio-de-mercado.png"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Estudio de mercado.</h5>
+                      <p class="card-text">Puedo hacer estudio e investigación de mercados para su negocio</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 50
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img src="https://blog.gft.com/es/wp-content/uploads/sites/3/2016/01/illustration-Converted.png"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Gestión de proyectos.</h5>
+                      <p class="card-text">Puedo hacer la gestión de proyectos por usted.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 35
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="asistente_virtual">
+                  <div class="card h-100">
+                    <img
+                      src="https://image.freepik.com/vector-gratis/asistencia-clientes-centro-llamadas-operador-linea-directa-gerente-consultoria-atencion-al-cliente-servicio-transparente-personalizado-concepto-experiencia-cliente_335657-100.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Asistencia al cliente</h5>
+                      <p class="card-text">Puedo asistir al cliente por usted, el precio es por hora.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 11
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img
+                      src="https://4.bp.blogspot.com/-nTlhl9ILAiI/VrO1o39TJ1I/AAAAAAAAW3c/Oq9D5z-wN1A/s634/Plantillas-excel-contabilidad-finanzas-gestion.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Contabilidad</h5>
+                      <p class="card-text">Puedo ayudar en el manejo de la contabilidad de su empresa usando excel.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 15
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="rrhh">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.marketeroslatam.com/wp-content/uploads/2017/02/formato-curriculum-vitae-occ.png"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Creación de Currículo</h5>
+                      <p class="card-text">Puedo realizar su currículo por usted.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 18
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="estudio_mercado">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.girlsguidetopm.com/wp-content/uploads/2020/01/Essential-Project-Documents-Banner-New-1024x536.png"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Documentos de gestión de proyectos.</h5>
+                      <p class="card-text">Puedo crear documentos para la gestión de su proyecto.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 19
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="asistente_virtual">
+                  <div class="card h-100">
+                    <img src="https://designshack.net/wp-content/uploads/Marketing-Plan-2.0-Powerpoint-Template.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Creación de presentaciones con PowerPoint</h5>
+                      <p class="card-text">Haré presentaciones con PowerPoint para su negocio o empresa.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 40
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.eleconomista.com.mx/__export/1610597398453/sites/eleconomista/img/2021/01/13/fp-1_140121w.jpg_1084158909.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Finanzas de su empresa</h5>
+                      <p class="card-text">Estoy dispuesto y comprometido a realizar el manejo de las finanzas de su
+                        negocio.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 68
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img
+                      src="https://assets.entrepreneur.com/content/3x2/2000/20190122151859-plan-de-negocios.jpeg?width=700&crop=2:1"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Plan de negocios</h5>
+                      <p class="card-text">Puedo hacer un plan de negocios para su proyecto.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 75
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img src="https://vianica.com/special/nov_06/f1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Diseños de trajes folkloricos</h5>
+                      <p class="card-text">Diseño trajes folkloricos a su gusto.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 20
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img src="https://cdn.euroinnova.edu.es/img/subidasEditor/funciones%20(31)-1616497780.webp"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Diseño de escenarios culturales</h5>
+                      <p class="card-text">Estoy dispuesto a diseñar los mejores escenarios culturales.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 27
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="planes_negocios">
+                  <div class="card h-100">
+                    <img src="https://diccionarioactual.com/wp-content/uploads/2017/01/traje.jpg" class="card-img-top"
+                      alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Trajes</h5>
+                      <p class="card-text">Puedo diseñar cualquier tipo de traje que usted desee al mejor precio.</p>
+                    </div>
+                    <div class="price">
+                      <p>
+                        Price: $ 24
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+
+            <%- include('partials/footer.html') %>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous"></script>
+
+
+              <!--SCRIPT-->
+              <script>
+                $(document).ready(function () {
+
+                  $('.category_item').click(function () {
+                    var catService = $(this).attr('category');
+                    //alert(catService);
+                    //Ocultando productos
+                    $('.product-item').hide();
+                    //Mostrando los solicitados
+                    $('.product-item[category="' + catService + '"]').show();
+                  });
+                });
+              </script>
+              <style>
+                .price {
+                  text-align: right;
+                  margin-right: 10px;
+                  color: green;
+                  font-size: 14px;
+                  font-weight: bold;
+                }
+              </style>
+</body>
+
+</html>

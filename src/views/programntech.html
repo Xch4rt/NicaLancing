@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <%- include('partials/header.html') %>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <% if (user) {%>
+    <%- include('partials/navigationUserLog.html') %>
+      <%} else {%>
+        <%- include('partials/navigation.html') %>
+          <%}%>
+            <!--NAVIGATION CATEGORIES-->
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll category_list"
+                    style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="diseno_web">
+                        <%=categories[0].tech1%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="programacion">
+                        <%=categories[0].tech2%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="apps_moviles">
+                        <%=categories[0].tech3%>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link category_item" href="#" category="pruebas_user">
+                        <%=categories[0].tech4%>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="ms-auto">
+                    <form class="d-flex ">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </nav>
+
+
+            <div class="container mt-4 mb-4">
+              <h3>Programación y tecnología</h3>
+              <br>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col product-item" category="diseno_web">
+                  <div class="card h-100">
+                    <img src="https://www.extradigital.es/wp-content/uploads/2020/01/web-marketing-digital-segovia.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Desarrollo de página web con wordpress</h5>
+                      <p class="card-text">Puedo desarrollar una página web utilizando wordpress para su empresa.</p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 85</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="diseno_web">
+                  <div class="card h-100">
+                    <img
+                      src="https://elbloginformatico.es/wp-content/uploads/1601989976_Google-Ads-presenta-Insights-automatizados-campanas-Performance-Max-para-lanzar.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Google Ads</h5>
+                      <p class="card-text">Diseñaré tus banneres de google ads</p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 15</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img src="https://top.gg/images/dblnew.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Discord bots</h5>
+                      <p class="card-text">Puedo programar los mejores bots para que tu server sea aun más funcional.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 120</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img src="https://i.pinimg.com/originals/03/3d/e8/033de81c2a666aac459660912cb1ca93.jpg"
+                      class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Desarrollo de juego 2D en unity</h5>
+                      <p class="card-text">Estoy dispuesto a ayudar en el desarrollo de su juego 2D con unity.</p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 58</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img src="http://www.headsem.com/wp-content/uploads/2017/09/c-sharp.png" class="card-img-top"
+                      alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Programación de aplicaciones en C#</h5>
+                      <p class="card-text">Puedo programar cualquier tipo de aplicación de escritorio que desee con C#.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 40</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="apps_moviles">
+                  <div class="card h-100">
+                    <img src="https://cdn.andro4all.com/files/2021/05/Android-Studio.jpg" class="card-img-top"
+                      alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Aplicación móvil con Android Studio</h5>
+                      <p class="card-text">Puedo ayudar en el desarrollo de su aplicación android.</p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 65</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://blogthinkbig.com/wp-content/uploads/sites/4/2019/03/Python-Example-Logo.jpg?resize=610%2C407"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Clases de Python</h5>
+                      <p class="card-text">
+                        Doy clases en python, puedo enseñarte desde lo básico hasta lo
+                        más avanzado. El precio es por hora.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 10</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://itmastersmag.com/wp-content/uploads/2021/01/shutterstock_1078387013-scaled.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Resuelvo problemas de programación</h5>
+                      <p class="card-text">
+                        Puedo resolver cualquier problema que tengas en cualquiera de
+                        estos lenguajes: C, C++, C#, Java, Python, Rust y Go. $ 8 por
+                        problema.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 8</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.a2system.net/es/wp-content/uploads/sites/3/2020/04/icono-fondo-backend.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Desarrollo backend</h5>
+                      <p class="card-text">
+                        Estoy dispuesto a ayudar en el backend de tu página, tengo
+                        experiencia con MySQL, JavaScript, Python, Java y PHP.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 15</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="pruebas_user">
+                  <div class="card h-100">
+                    <img
+                      src="https://assets-global.website-files.com/5af97a9c84ec1bc79d81b5f4/5b442d9ca51a7f5b711e6d60_home_mast.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Testeo de aplicación</h5>
+                      <p class="card-text">
+                        Puedo probar tu aplicación y sugerir mejoras.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 18</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="pruebas_user">
+                  <div class="card h-100">
+                    <img
+                      src="https://12dlm43fyk8i1ijas81ukh3x-wpengine.netdna-ssl.com/wp-content/uploads/2020/08/G2-home-page.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Revisión de página web</h5>
+                      <p class="card-text">
+                        Doy revisión a su página web y daré sugerencias de mejoras.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 18</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://venturebeat.com/wp-content/uploads/2020/08/unity-2.jpg?w=1200&strip=all"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Tutoría en unity</h5>
+                      <p class="card-text">
+                        Doy tutorías en unity para el desarrollo de su videojuego, el
+                        precio $15 la hora.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 15</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://www.fundacionaquae.org/wp-content/uploads/2017/02/arduino.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Programación en arduino</h5>
+                      <p class="card-text">
+                        Puedo ayudar programando en arduino.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 90</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://lh3.googleusercontent.com/proxy/Shr8usMxPBpue0mIvfLsohgpifPUCA_4RfVKXDh2sTZqH9MT3y4kQi45dhpzee1xd4GZI5CUkntRRB7lhPvrobljUS94NAmTXOxS3_cfR1eTsiLluZBH5aUiy3zz4w"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Proyecto en python</h5>
+                      <p class="card-text">
+                        Estoy disponible en ayudar con tu proyecto en python.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 110</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col product-item" category="programacion">
+                  <div class="card h-100">
+                    <img
+                      src="https://media.bitdegree.org/storage/media/images/2018/11/What-Is-A-Full-Stack-Developer-and-Everything-You-Need-to-Know-to-Start.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Desarrollador fullstack</h5>
+                      <p class="card-text">
+                        Soy desarrollador fullstack y estoy comprometido a ayudarte en tu proyecto.
+                      </p>
+                    </div>
+                    <div class="price">
+                      <p>Price: $ 25</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+            <%- include('partials/footer.html') %>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous"></script>
+
+
+              <!--SCRIPT-->
+              <script>
+                $(document).ready(function () {
+
+                  $('.category_item').click(function () {
+                    var catService = $(this).attr('category');
+                    //alert(catService);
+                    //Ocultando productos
+                    $('.product-item').hide();
+                    //Mostrando los solicitados
+                    $('.product-item[category="' + catService + '"]').show();
+                  });
+                });
+              </script>
+              <style>
+                .price {
+                  text-align: right;
+                  margin-right: 10px;
+                  color: green;
+                  font-size: 14px;
+                  font-weight: bold;
+                }
+              </style>
+</body>
+
+</html>

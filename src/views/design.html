@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= title %>
+    </title>
+    <%- include('partials/header.html') %>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <% if (user) {%>
+        <%- include('partials/navigationUserLog.html') %>
+            <%} else {%>
+                <%- include('partials/navigation.html') %>
+                    <%}%>
+                        <!--NAVIGATION DESIGN-->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse" id="navbarScroll">
+                                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll category_list"
+                                        style="--bs-scroll-height: 100px;">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#"></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link category_item" href="#" category="diseno_logos">
+                                                <%=categories[1].design1%>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link category_item" href="#" category="gameart">
+                                                <%=categories[1].design2%>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link category_item" href="#" category="ilustraciones">
+                                                <%=categories[1].design3%>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link category_item" href="#" category="disenoux">
+                                                <%=categories[1].design4%>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="ms-auto">
+                                        <form class="d-flex ">
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </nav>
+
+
+                        <!--PUBLICACIONES-->
+
+                        <div class="container mt-4 mb-4">
+                            <h3>Diseño</h3><br>
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col product-item" category="gameart">
+                                    <div class="card h-100">
+                                        <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/08/21/15980001130674.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Diseño de personajes en blender
+                                            </h5>
+                                            <p class="card-text">
+                                                Diseñaré los personajes de su videojuego con blender.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 18
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://i.pinimg.com/originals/68/6a/35/686a355ce7e8b4436ce4cb5a31784a90.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Sketch a vector
+                                            </h5>
+                                            <p class="card-text">
+                                                Convertire tu bosquejo a un vector utilizando
+                                                herramientas como Adobe Illustrator.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 20 - 25
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="diseno_logos">
+                                    <div class="card h-100">
+                                        <img src="https://www.ibizasocialagency.com/wp-content/uploads/2017/11/diseno-logotipos-ibiza.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Diseño de logotipos
+                                            </h5>
+                                            <p class="card-text">
+                                                Puedo diseñar el logotipo de su empresa.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 20
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://image.freepik.com/vector-gratis/plantilla-infografia-diseno-poster-colgante_1126-229.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Diseño de posteres.
+                                            </h5>
+                                            <p class="card-text">
+                                                Diseñaré posteres profesionales para usted.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 20
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="diseno_logos">
+                                    <div class="card h-100">
+                                        <img src="https://i1.wp.com/esferacreativa.com/wp-content/uploads/2017/04/diseno-de-portadas-ebooks-Teresa-Alba-MadridNYC.png?fit=640%2C320&ssl=1"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Diseño de portada para libros.
+                                            </h5>
+                                            <p class="card-text">
+                                                Haré el diseño de la portada de su libro.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 30
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://images.vexels.com/media/users/3/172273/list/6a6f11c2ab635f7424a22b6c04385ea7-coleccion-de-logos-de-citas-de-miel.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Convertiré tus imagenes a vectores
+                                            </h5>
+                                            <p class="card-text">
+                                                Puedo convertir tus imagenes o logos a vectores con diferentes programas
+                                                de diseño y con el formato que tu quieras.
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 15
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://i.pinimg.com/originals/68/6a/35/686a355ce7e8b4436ce4cb5a31784a90.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sketch a vector</h5>
+                                            <p class="card-text">Convertire tu bosquejo a un vector utilizando
+                                                herramientas como Adobe Illustrator.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 15 - 25
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col product-item" category="diseno_logos">
+                                    <div class="card h-100">
+                                        <img src="https://images.squarespace-cdn.com/content/v1/5bac36abe5f7d17f81f16f5b/1600316895700-LNFCRV04E7EUT257NOKD/ke17ZwdGBToddI8pDm48kN_ZoNdj1kv_gIvm4zjH76N7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8AelHsSihC3tfiYK1eHEM7W3AVjJQSBul2wE-DqW7dygg/Milca+Roja%3A+Billboard+Campaign"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Diseño de publicidad</h5>
+                                            <p class="card-text">Estoy dispuesto a realizar publicidad para promocionar
+                                                su negocio.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 30 - 50
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="diseno_logos">
+                                    <div class="card h-100">
+                                        <img src="https://romansmedia.com/roman2020/wp-content/uploads/2020/12/2do-portada-1080x675.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Diseño de logos</h5>
+                                            <p class="card-text">Diseños únicos de logos al mejor precio.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 10 - 20
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="disenoux">
+                                    <div class="card h-100">
+                                        <img src="https://1.bp.blogspot.com/-M5d9IzmYuZI/XYLsx8aan1I/AAAAAAAAAW0/nzFU5lzBsicyJu6RbQ7WH6bIEFovT4RNwCLcBGAsYHQ/s1600/frontend.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Diseño de página web</h5>
+                                            <p class="card-text">Puedo realizar el mejor diseño para su página web en
+                                                menos de 24 horas.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 80
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://www.factoriacreativabarcelona.es/wp-content/uploads/2017/02/importancia-del-diseno.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Diseños de cualquier tipo</h5>
+                                            <p class="card-text">Puedo hacer tu diseño para cualquier tipo de
+                                                impresiones, papeleria en imprenta o impresion digital de publicidad,
+                                                redibujo y creacion de logos.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 58
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col product-item" category="ilustraciones">
+                                    <div class="card h-100">
+                                        <img src="https://i.ytimg.com/vi/m3evOpZxQCY/maxresdefault.jpg"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Realización de dibujos</h5>
+                                            <p class="card-text">Cualquier dibujo que usted desee yo lo podré hacer, el
+                                                precio dependerá de la complejidad del dibujo.</p>
+                                        </div>
+                                        <div class="price">
+                                            <p>
+                                                Price: $ 15 - 35
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    <%- include('partials/footer.html') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+        <!--SCRIPT-->
+        <script>
+            $(document).ready(function () {
+
+                $('.category_item').click(function () {
+                    var catService = $(this).attr('category');
+                    //alert(catService);
+                    //Ocultando productos
+                    $('.product-item').hide();
+                    //Mostrando los solicitados
+                    $('.product-item[category="' + catService + '"]').show();
+                });
+            });
+        </script>
+        <style>
+            .price {
+                text-align: right;
+                margin-right: 10px;
+                color: green;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        </style>
+        </body>
+    
+        </html>

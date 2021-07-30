@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+
+    <%- include ('partials/header.html') %>
+</head>
+<body>
+    <% if (user) { %>
+        <%- include ('partials/navigationUserLog.html')%>
+    <%} else {%>
+    <%- include ('partials/navigation.html')%> <!--Incluye el nav-->
+    <%} %>
+    <div class="container mt-4 " >  
+        <%- include ('partials/cards.html') %>
+           
+    </div>
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Registrate!</h5>
+              <p class="card-text">Create una cuenta y publica tus mejores ideas!:).</p>
+              <a href="/signup" class="btn btn-primary">Registrate!</a>
+            </div>
+          </div>
+    </div>
+
+    <div class="container mt-4 mb-4">
+        <h3>Continuar navegando</h3>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://i.pinimg.com/originals/68/6a/35/686a355ce7e8b4436ce4cb5a31784a90.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sketch a vector</h5>
+                  <p class="card-text">Convertire tu bosquejo a un vector utilizando herramientas como Adobe Illustrator.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://elbloginformatico.es/wp-content/uploads/1601989976_Google-Ads-presenta-Insights-automatizados-campanas-Performance-Max-para-lanzar.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Google Ads</h5>
+                  <p class="card-text">Diseñaré tus banneres de google ads</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://top.gg/images/dblnew.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Discord bots</h5>
+                  <p class="card-text">Puedo programar los mejores bots para que tu server sea aun más funcional.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://images.vexels.com/media/users/3/172273/list/6a6f11c2ab635f7424a22b6c04385ea7-coleccion-de-logos-de-citas-de-miel.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Convertiré tus imagenes a vectores</h5>
+                  <p class="card-text">Puedo convertir tus imagenes o logos a vectores con diferentes programas de diseño y con el formato que tu quieras.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-02/mascarilla-1400x896.png?h=76248a9b&itok=d10qcULr" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mascarillas artesanales</h5>
+                    <p class="card-text">Realizamos las mejores mascarillas, comodas y economicas solo para vos.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <%- include ('partials/footer.html')%>
+    </footer>
+    
+    <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/src/public/js/index.js"></script>
+</body>
+</html>

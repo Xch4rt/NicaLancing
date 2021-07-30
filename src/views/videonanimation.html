@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/header.html') %>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+    <% if (user) {%>
+    <%- include('partials/navigationUserLog.html') %>
+    <%} else {%>
+        <%- include('partials/navigation.html') %>
+    <%}%>
+    
+
+    <!--NAVIGATION VIDEO ANIMATION-->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll category_list" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category_item" href="#" category="edicion_videos"> 
+                            <%=categories[2].animation1%>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category_item" href="#" category="anuncios_publicidad">
+                            <%=categories[2].animation2%>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category_item" href="#" category="intros_outros">
+                            <%=categories[2].animation3%>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category_item" href="#" category="animacion_personajes">
+                            <%=categories[2].animation4%>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <form class="d-flex ">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </nav>
+
+    <!--PUBLICACIONES-->
+
+    <div class="container mt-4 mb-4">
+        <h3>Video y animación</h3>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col product-item" category="edicion_videos">
+              <div class="card h-100">
+                <img src="https://www.pcworld.es/cmsdata/slideshow/3676126/mejores-editores-video_davinci-resolve_thumb800.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Edición de videos</h5>
+                  <p class="card-text">Puedo hacer una edición de videos profesionales solo para ti.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col product-item" category="animacion_personajes">
+              <div class="card h-100">
+                <img src="https://www.studynetworks.co/wp-content/uploads/2020/03/p182.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Animaciones 3D</h5>
+                  <p class="card-text">Puedo hacerte todo tipo de animaciones en 3D.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col product-item" category="edicion_videos">
+              <div class="card h-100">
+                <img src="https://www.neoteo.com/wp-content/uploads/2020/12/logo3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Subtítulos en español e inglés.</h5>
+                  <p class="card-text">Subtitularé cualquier video en inglés a español y viceversa.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col product-item" category="animacion_personajes">
+                <div class="card h-100">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSUrIHKTNE3R4TTOd6U5kuNwm83rAEgSOHw&usqp=CAU" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Animación 2D para niños.</h5>
+                    <p class="card-text">Dispuesto a realizar una animación 2D para niños en menos de 24 horas.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col product-item"  category="anuncios_publicidad">
+                <div class="card h-100">
+                  <img src="https://protarget.com.mx/wp-content/uploads/2019/04/spot-publicitario-D_NQ_NP_624650-MLM29462098154_022019-F.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Realización de anuncios cortos.</h5>
+                    <p class="card-text">Puedo realizar un anuncio corto para promocionar su empresa o negocio para Facebook o Youtube.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col product-item" category="anuncios_publicidad">
+              <div class="card h-100">
+                <img
+                  src="https://www.fotografiamarquez.com/content/img/web/Tr%C3%ADptico%201000%20P%C3%ADxeles%20Retrato%20Corporativo%202.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Toma de retratos.</h5>
+                  <p class="card-text">
+                    Puedo tomarle retratos a usted de manera profesional, $ 15 por
+                    foto.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 15</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="intros_outros">
+              <div class="card h-100">
+                <img
+                  src="https://fredthewebguy.me/wp-content/uploads/2019/09/illustration-hand-on-tablet-youtube.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Intros y outros para tus videos de youtube.</h5>
+                  <p class="card-text">
+                    Puedo animar una intro y un outro para tus vídeos de youtube.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 55</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="edicion_videos">
+              <div class="card h-100">
+                <img
+                  src="https://cdn.animum3d.com/wp-content/uploads/2018/04/23152456/efectos-especiales-para-publicidad.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Efectos especiales</h5>
+                  <p class="card-text">
+                    Puedo realizar todo tipo de efectos especiales para tus escenas.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 90</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="anuncios_publicidad">
+              <div class="card h-100">
+                <img
+                  src="https://i.pinimg.com/originals/5f/7a/85/5f7a8576f377d822897774b8d19bc8bf.gif"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Animación de fotos</h5>
+                  <p class="card-text">
+                    Puedo darle animación a tus fotos con efectos sorprendentes.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 155</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="anuncios_publicidad">
+              <div class="card h-100">
+                <img
+                  src="https://i2.wp.com/www.diegocoquillat.com/wp-content/uploads/2020/05/La-magia-del-unboxing-llega-a-la-gastronomia.jpg?fit=700%2C330&ssl=1&resize=1280%2C720"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Unboxing de tu producto</h5>
+                  <p class="card-text">
+                    Puedo hacer un video donde hago unboxing de tu producto.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 140</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="edicion_videos">
+              <div class="card h-100">
+                <img
+                  src="https://www.trecebits.com/wp-content/uploads/2019/08/efectos.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Efectos especiales a tus videos</h5>
+                  <p class="card-text">
+                    Puedo dar efectos especiales a tus videos.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 80</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col product-item" category="edicion_videos">
+              <div class="card h-100">
+                <img
+                  src="https://i.ytimg.com/vi/xamJmX4Gj8g/maxresdefault.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Animación de logos</h5>
+                  <p class="card-text">
+                    Estoy dispuesto a realizar una animación de tu logotipo al mejor precio.
+                  </p>
+                </div>
+                <div class="price">
+                  <p>Price: $ 65</p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <%- include('partials/footer.html') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+     <!--SCRIPT-->
+     <script>
+      $(document).ready(function(){
+
+        $('.category_item').click(function(){
+          var catService = $(this).attr('category');
+          //alert(catService);
+          //Ocultando productos
+          $('.product-item').hide();
+          //Mostrando los solicitados
+          $('.product-item[category="'+catService+'"]').show();
+        });
+      });
+    </script>
+    <style>
+      .price {
+        text-align: right;
+        margin-right: 10px;
+        color: green;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    </style>
+</body>
+</html>

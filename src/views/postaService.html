@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include ('partials/header.html') %>
+</head>
+<body>
+
+    <%- include('partials/navigationUserLog.html') %>
+    <div class="container mt-4">
+        <form action="/menu">
+            <div class="form-group mb-3">
+              <label for="exampleFormControlInput1">Nombre del servicio</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="best nombre">
+            </div>
+            <div class="form-group mb-3">
+              <label for="exampleFormControlSelect1">Selecciona una categoria</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Programacion y tecnologia</option>
+                <option>Diseño</option>
+                <option>Video y animacion</option>
+                <option>Negocios</option>
+                
+              </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleFormControlFile1">Sube una imagen representativa!</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="customRange1">Ponle un precio adecuado</label>
+              <div class="range-slider">
+                <input class="input-range" type="range" value="250" min="1" max="500">
+                <span class="range-value"></span>
+            </div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="exampleFormControlTextarea1">Y por ultimo agrega una breve descripcion:)</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mb-2">Aceptar</button>
+            </div>
+          </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        var range = $('.input-range'),
+          value = $('.range-value');
+
+        value.html(range.attr('value'));
+
+        range.on('input', function () {
+          value.html(this.value);
+        });
+    </script>
+
+    <style>
+      .range-slider .input-range {
+      -webkit-appearance: none;
+      width: 300px;
+      height: 10px;
+      border-radius: 5px;
+      background: #0B5ED7;
+      outline: none;
+    }
+    .range-slider .input-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #666;
+      cursor: pointer;
+      -webkit-transition: background .15s ease-in-out;
+      transition: background .15s ease-in-out;
+    }
+    .range-slider .input-range::-webkit-slider-thumb:hover {
+      background: #fff;
+    }
+    .range-slider .input-range:active::-webkit-slider-thumb {
+      background: #fff;
+    }
+    .range-slider .input-range::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border: 0;
+      border-radius: 50%;
+      background: #666;
+      cursor: pointer;
+      -webkit-transition: background .15s ease-in-out;
+      transition: background .15s ease-in-out;
+    }
+    .range-slider .input-range::-moz-range-thumb:hover {
+      background: #fff;
+    }
+    .range-slider .input-range:active::-moz-range-thumb {
+      background: #fff;
+    }
+    .range-slider .range-value {
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      color: #fff;
+      font-size: 16px;
+      font-weight:bold;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 3px;
+      background: #0B5ED7;
+      padding: 5px 10px;
+      margin-left: 7px;
+    }
+    .range-slider .range-value:after {
+      position: absolute;
+      top: 8px;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 7px solid #0B5ED7;
+      border-bottom: 7px solid transparent;
+      content: '';
+    }
+
+    ::-moz-range-track {
+      background: #0B5ED7;
+      border: 0;
+    }
+
+    input::-moz-focus-inner {
+      border: 0;
+    }
+
+    </style>
+</body>
+</html>
+<!--trabajar en las funciones principales y mas que todo lo visual-->
